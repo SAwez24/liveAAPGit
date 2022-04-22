@@ -1,6 +1,6 @@
 package app;
 
-public class PointCalculator {
+public class PointCalculatorPointObject {
 	public static void main(String[] args) {
 		Point point1 = new Point(5, 6);
 		Point point2 = new Point(7, 9);
