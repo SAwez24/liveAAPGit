@@ -3,7 +3,13 @@ package basic;
 public class MultipleMainEx {
 	public static void main(String[] args) {
 		System.out.println("entry point");
-		int number[] = { 2, 3 };
+		// create / initialize
+//		int number[] = { 2, 3 };
+		int number[];
+		number = new int[2];
+		number[0] = 2;
+		number[1] = 2;
+		
 		main(number);
 		mainMethod();
 	}
