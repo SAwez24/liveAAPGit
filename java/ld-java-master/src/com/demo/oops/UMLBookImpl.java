@@ -5,5 +5,6 @@ public class UMLBookImpl {
 		UMLBook umlBook = new UMLBook("Sww", "Simon");
 		System.err.println(umlBook.titleString);
 		System.err.println(umlBook.authorString);
+		umlBook.calculateDiscount("fiction");
 	}
 }
