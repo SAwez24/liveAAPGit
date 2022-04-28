@@ -3,8 +3,11 @@ package com.demo.oops;
 class CreditCard {
 	// encapsulated fields
 	private long creditCardNo = 1234123412349876L;
+	// read only
 	private String cardHolderName = "Jim";
+	// write only
 	private int pin;
+	// read / write with restrictions
 	private int age;
 
 	public String getCardHolderName() {
@@ -29,7 +32,7 @@ class CreditCard {
 			System.err.println("Children cannot hold cards!");
 			return;
 		}
-		if (age > 60) {
+		if (age > 61) {
 			System.err.println("Too wise to hold cards!");
 			return;
 		}
