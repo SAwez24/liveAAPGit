@@ -2,8 +2,12 @@ package com.demo.oops;
 
 public class EncapsulationEx {
 	public static void main(String[] args) {
-
-		EncapsulationTest encapsulationTest = new EncapsulationTest();
+		// object
+//		EncapsulationTest encapsulationTest = new EncapsulationTest();
+		// reference
+		EncapsulationTest encapsulationTest = null;
+//		instance
+		encapsulationTest = new EncapsulationTest();
 		encapsulationTest.testString = "available outside.....";
 		System.out.println(encapsulationTest.testString);
 
@@ -15,7 +19,7 @@ public class EncapsulationEx {
 
 class EncapsulationTest {
 	// Not Encap
-	public String testString = "not encapsulated";
+	public String testString = "not (partially) encapsulated";
 	// encapsulated
 	private String testString1 = "encapsulated";
 }

@@ -8,8 +8,8 @@ public class ASCIIEx {
 	}
 
 	private static void asciiTable() {
-		for(int decimal = 0; decimal < 128; decimal ++) {
-			char character = (char)decimal;
+		for (int decimal = 0; decimal < 128; decimal++) {
+			char character = (char) decimal;
 			System.err.print(character + " > " + decimal + "\t");
 		}
 	}
@@ -47,8 +47,7 @@ public class ASCIIEx {
 		// String nameString = "anne";
 		// String nameString2 = "annE";
 
-
-				String nameString2 = "an#ne";
+		String nameString2 = "an#ne";
 		String nameString = "an$ne";
 
 		String biggerString = "equal";

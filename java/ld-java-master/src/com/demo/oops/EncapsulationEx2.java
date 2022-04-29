@@ -1,7 +1,7 @@
 package com.demo.oops;
 
 class CreditCard {
-	// encapsulated fields
+	// encapsulated fields (properties)
 	private long creditCardNo = 1234123412349876L;
 	// read only
 	private String cardHolderName = "Jim";
@@ -17,7 +17,7 @@ class CreditCard {
 	public String getCreditCardNo() {
 		return "XXXXXXXXXXXX9876";
 	}
-
+// restricted access to the age property
 	public int getAge() {
 		if (age > 50) {
 			System.err.println("young");
