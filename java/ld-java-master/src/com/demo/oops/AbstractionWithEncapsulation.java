@@ -23,6 +23,10 @@ public class AbstractionWithEncapsulation {
 abstract class Account1 {
 	// abstract method has no body
 	public abstract void getAccountInfo();
+	// methods with body : concrete methods
+	public void getAccountBank() {
+		System.out.println("XYZ Bank");
+	}
 }
 
 class SavingsAccount1 extends Account1 {

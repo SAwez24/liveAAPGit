@@ -4,11 +4,11 @@ public class MultipleInheritance {
 	class Telephone3 {
 		
 	}
-	class MusicPlayer {
+	class MusicPlayer1 {
 		
 	}
 //	JAVA DOES NOT SUPPORT MULTIPLE INHERITANCE
-	class SmartPhone3 extends Telephone3, MusicPlayer {
-		
-	}
+//	class SmartPhone3 extends Telephone3, MusicPlayer1 {
+//		
+//	}
 }
