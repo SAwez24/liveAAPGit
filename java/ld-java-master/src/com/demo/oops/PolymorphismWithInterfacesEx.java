@@ -1,26 +1,29 @@
 package com.demo.oops;
 
-public class InterfaceEx {
+public class PolymorphismWithInterfacesEx {
 	public static void main(String[] args) {
-		MusicPlayer musicPlayer = new IPhone();
-		musicPlayer.play();
-		musicPlayer.pause();
-		musicPlayer.changeTrack();
-
-		musicPlayer = new CasettePlayer();
-		musicPlayer.play();
-		musicPlayer.pause();
-		musicPlayer.changeTrack();
-		
-		musicPlayer = new Bird();
-		musicPlayer.play();
-		musicPlayer.pause();
-		musicPlayer.changeTrack();
+		MusicPlayer1 musicPlayer1 = null;
+		//Polymorphism : many forms
+		// music player in many forms
+		// dynammic : only during runtime
+		// player known at runtime
+		double randomNo = Math.random();
+		if(randomNo > 0.7)
+		musicPlayer1 = new IPhone1();
+		else if (randomNo > 0.3) {
+			musicPlayer1 = new CasettePlayer1();
+		}
+		else {
+			musicPlayer1 = new Bird1();
+		}
+		musicPlayer1.play();
+		musicPlayer1.pause();
+		musicPlayer1.changeTrack();
 	}
 }
 // interfaces have abstract methods
 // can be implemented by any class
-interface MusicPlayer {
+interface MusicPlayer1 {
 //	public abstract void play();
 //	abstract public void play();
 	public void play();
@@ -34,7 +37,7 @@ interface MusicPlayer {
 //	}
 }
 
-class IPhone implements MusicPlayer {
+class IPhone1 implements MusicPlayer1 {
 
 	@Override
 	public void play() {
@@ -59,7 +62,7 @@ class IPhone implements MusicPlayer {
 //	}
 }
 
-class CasettePlayer implements MusicPlayer {
+class CasettePlayer1 implements MusicPlayer1 {
 
 	@Override
 	public void play() {
@@ -78,7 +81,7 @@ class CasettePlayer implements MusicPlayer {
 	}
 }
 
-class Bird  implements MusicPlayer{
+class Bird1  implements MusicPlayer1{
 	@Override
 	public void play() {
 		System.err.println("Sing song when they see their master or whenever they feel like");
