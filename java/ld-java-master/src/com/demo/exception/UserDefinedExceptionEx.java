@@ -5,11 +5,12 @@ public class UserDefinedExceptionEx {
 
 		try {
 			int age = 100;
-			age = 50;
+//			age = 50;
 			if (age > 20 && age < 61)
 				System.err.println("Valid");
 			else {
-				AgeNotValidException ageNotValidException = new AgeNotValidException("Invalid emp age");
+//				AgeNotValidException ageNotValidException = new AgeNotValidException("Invalid emp age");
+				AgeNotValidException ageNotValidException = new AgeNotValidException();
 				throw ageNotValidException;
 			}
 
@@ -22,8 +23,14 @@ public class UserDefinedExceptionEx {
 
 // user-defined Exception
 class AgeNotValidException extends RuntimeException {
-//	public RuntimeException(String message)
+	public AgeNotValidException() {
+		System.err.println("default cons");
+	}
+
 	public AgeNotValidException(String message) {
+//		public RuntimeException(String message)
 		super(message);
 	}
+
+
 }
