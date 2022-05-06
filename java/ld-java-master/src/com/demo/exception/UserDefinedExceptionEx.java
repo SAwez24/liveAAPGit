@@ -9,13 +9,14 @@ public class UserDefinedExceptionEx {
 			if (age > 20 && age < 61)
 				System.err.println("Valid");
 			else {
-//				AgeNotValidException ageNotValidException = new AgeNotValidException("Invalid emp age");
-				AgeNotValidException ageNotValidException = new AgeNotValidException();
+				AgeNotValidException ageNotValidException = new AgeNotValidException("Invalid emp age");
+//				AgeNotValidException ageNotValidException = new AgeNotValidException();
 				throw ageNotValidException;
 			}
 
 		} catch (AgeNotValidException exception) {
 			System.out.println(exception.getMessage());
+		
 		}
 
 	}
