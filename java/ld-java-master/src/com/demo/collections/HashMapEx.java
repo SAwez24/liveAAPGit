@@ -3,7 +3,7 @@ package com.demo.collections;
 import java.util.HashMap;
 import java.util.Map;
 
-// IP : store bookID and Book object / insert update search delete
+// IP : store bookID and Book objects / insert update search delete
 public class HashMapEx {
 	public static void main(String[] args) {
 		mapOperations();

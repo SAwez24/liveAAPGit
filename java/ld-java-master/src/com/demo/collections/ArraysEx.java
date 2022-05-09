@@ -31,15 +31,15 @@ public class ArraysEx {
 	private static void booksArray() {
 		// arrays : fixed size / similar datatypes / indexed
 		// creating an array
-		Book books [] = null;
+		Book1 books [] = null;
 //		init size with 3 elements 
 
-		books = new Book[3];
+		books = new Book1[3];
 //		assign elements
 //		No enclosing instance of type ArraysEx is accessible. Must qualify the allocation with an enclosing instance of type ArraysEx
-		books[2] = new Book("978-0670923175", "Simon Sinek", 369);
-		books[1] = new Book("978-06709231751", "Simon Sinek1", 3691);
-		books[0] = new Book("978-06709231752", "Simon Sinek2", 3692);
+		books[2] = new Book1("978-0670923175", "Simon Sinek", 369);
+		books[1] = new Book1("978-06709231751", "Simon Sinek1", 3691);
+		books[0] = new Book1("978-06709231752", "Simon Sinek2", 3692);
 //		type mismatch: cannot convert from String to float
 //		monitorSizes[0] = "welcome";
 		

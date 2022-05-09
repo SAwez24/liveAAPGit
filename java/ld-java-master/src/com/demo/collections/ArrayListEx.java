@@ -19,7 +19,7 @@ public class ArrayListEx {
 		arrayList.add(25.5f);
 		arrayList.add("dell");
 		arrayList.add(true);
-		Book book = new Book("978-0670923175", "Simon Sinek", 369);
+		Book1 book = new Book1("978-0670923175", "Simon Sinek", 369);
 		arrayList.add(book);
 
 		// all object
@@ -28,7 +28,7 @@ public class ArrayListEx {
 		System.err.println(arrayList.get(0));
 		System.err.println(arrayList.get(1));
 		System.err.println(arrayList.get(2));
-		Book book2 = (Book)arrayList.get(3);
+		Book1 book2 = (Book1)arrayList.get(3);
 		book2.getDetails();
 	}
 }

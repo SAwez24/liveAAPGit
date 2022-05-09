@@ -1,10 +1,10 @@
 package com.demo.collections;
-class Book {
+class Book1 {
 	// instance variables
 	private String ISBN;
 	private String authorName;
 	private int noOfPages;
-	public Book(String ISBN, String authorName, int noOfPages) {
+	public Book1(String ISBN, String authorName, int noOfPages) {
 //		super();
 		this.ISBN = ISBN;
 		this.authorName = authorName;
