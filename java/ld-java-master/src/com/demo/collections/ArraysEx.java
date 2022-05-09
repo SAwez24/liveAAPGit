@@ -20,7 +20,9 @@ public class ArraysEx {
 		monitorSizes[0] = 20.5f;
 //		type mismatch: cannot convert from String to float
 //		monitorSizes[0] = "welcome";
-		
+//		Type mismatch: cannot convert from boolean to float
+//		monitorSizes[2] = true;
+
 		for(int i = 0; i<monitorSizes.length; i++) {
 			System.err.println(monitorSizes[i]);
 		}
@@ -47,19 +49,4 @@ public class ArraysEx {
 	}
 }
 
-class Book {
-	// instance variables
-	private String ISBN;
-	private String authorName;
-	private int noOfPages;
-	public Book(String ISBN, String authorName, int noOfPages) {
-//		super();
-		this.ISBN = ISBN;
-		this.authorName = authorName;
-		this.noOfPages = noOfPages;
-	}
-	
-	public void getDetails() {
-		System.err.println(ISBN + "\t" + authorName + "\t" + noOfPages);
-	}
-}
+
