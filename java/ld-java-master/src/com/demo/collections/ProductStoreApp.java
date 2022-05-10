@@ -35,6 +35,8 @@ public class ProductStoreApp {
 			case 1:
 				addProduct();
 				break;
+			case 5:
+				searchProductById();
 			default:
 				System.err.println("Enter valid choice");
 				break;
@@ -44,6 +46,47 @@ public class ProductStoreApp {
 		}
 	}
 
+	private void searchProductById() {
+		System.err.println("Enter Id : ");
+		Scanner scanner = new Scanner(System.in);
+		int productId = Integer.parseInt(scanner.nextLine());
+		// iterate through map
+		boolean found = false;
+		for (Entry<Integer, Product> productEntry : productsMap.entrySet()) {
+			Integer productIdToCompare = productEntry.getKey();
+			if(productId == productIdToCompare)
+			{
+			Product product = productEntry.getValue();
+//			System.err.println(productId);
+			System.err.println(product);
+			found = true;
+			break;
+			}
+		}
+		if(!found)
+			System.err.println("Product not found!");
+	}
+
+	private void searchByProductName() {
+		System.err.println("Enter Id : ");
+		Scanner scanner = new Scanner(System.in);
+		int productId = Integer.parseInt(scanner.nextLine());
+		// iterate through map
+		boolean found = false;
+		for (Entry<Integer, Product> productEntry : productsMap.entrySet()) {
+			Integer productIdToCompare = productEntry.getKey();
+			if(productId == productIdToCompare)
+			{
+			Product product = productEntry.getValue();
+//			System.err.println(productId);
+			System.err.println(product);
+			found = true;
+			break;
+			}
+		}
+		if(!found)
+			System.err.println("Product not found!");
+	}
 	private void listProducts() {
 		// iterate through map
 		for (Entry<Integer, Product> productEntry : productsMap.entrySet()) {
@@ -67,9 +110,9 @@ public class ProductStoreApp {
 }
 
 class Product extends Object {
-	int productId;
-	String productName;
-	float price;
+	private int productId;
+	private String productName;
+	private float price;
 
 	public int getProductId() {
 		return productId;
