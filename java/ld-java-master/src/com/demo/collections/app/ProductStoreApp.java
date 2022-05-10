@@ -20,6 +20,7 @@ public class ProductStoreApp {
 		String option = "y";
 
 		while (option.equals("y")) {
+			System.out.println("***********************");
 			System.err.println("Product App");
 			System.err.println("0. List");
 			System.err.println("1. Add");
@@ -39,29 +40,50 @@ public class ProductStoreApp {
 			case 2:
 				updateProduct();
 				break;
+			case 4:
+				deleteByProductId();
+				break;
 			case 5:
 				searchByProductId();
+				break;
 			case 6:
 				searchByProductName();
+				break;
 			default:
 				System.err.println("Enter valid choice");
 				break;
 			}
-			System.err.print("continue y/n ? : ");
+			System.out.print("\ncontinue y/n ? : ");
 			option = scanner.nextLine();
 		}
 	}
 
 	private void updateProduct() {
-		System.err.println("Enter Product Id: ");
-		// search for product
-		// update code
+		System.err.println("Enter Id : ");
 		Scanner scanner = new Scanner(System.in);
 		int productId = Integer.parseInt(scanner.nextLine());
-		String productName = scanner.nextLine();
-		float price = Float.parseFloat(scanner.nextLine());
-		Product product = new Product(productId, productName, price);
-		productsMap.put(product.getProductId(), product);
+		// iterate through map
+		boolean found = false;
+		for (Entry<Integer, Product> productEntry : productsMap.entrySet()) {
+			Integer productIdToCompare = productEntry.getKey();
+			if (productId == productIdToCompare) {
+				// existing product
+				Product product = productEntry.getValue();
+				System.err.println(product);
+				System.out.print("Name : ");
+				String productName = scanner.nextLine();
+				System.out.print("Price : ");
+				float price = Float.parseFloat(scanner.nextLine());
+				// update existing product
+				product.setProductName(productName);
+				product.setPrice(price);
+				productsMap.put(product.getProductId(), product);
+				found = true;
+				break;
+			}
+		}
+		if (!found)
+			System.err.println("Product not found!");
 		// product does not exist
 	}
 
@@ -77,17 +99,16 @@ public class ProductStoreApp {
 		// iterate through map
 		boolean found = false;
 		for (Entry<Integer, Product> productEntry : productsMap.entrySet()) {
-			//get product
+			// get product
 			Product product = productEntry.getValue();
-			if(productName.equals(product.getProductName()))
-			{	
+			if (productName.equals(product.getProductName())) {
 //			System.err.println(productId);
-			System.err.println(product);
-			found = true;
-			break;
+				System.err.println(product);
+				found = true;
+				break;
 			}
 		}
-		if(!found)
+		if (!found)
 			System.err.println("Product not found!");
 	}
 
@@ -99,18 +120,18 @@ public class ProductStoreApp {
 		boolean found = false;
 		for (Entry<Integer, Product> productEntry : productsMap.entrySet()) {
 			Integer productIdToCompare = productEntry.getKey();
-			if(productId == productIdToCompare)
-			{
-			Product product = productEntry.getValue();
+			if (productId == productIdToCompare) {
+				Product product = productEntry.getValue();
 //			System.err.println(productId);
-			System.err.println(product);
-			found = true;
-			break;
+				System.err.println(product);
+				found = true;
+				break;
 			}
 		}
-		if(!found)
+		if (!found)
 			System.err.println("Product not found!");
 	}
+
 	private void listProducts() {
 		// iterate through map
 		for (Entry<Integer, Product> productEntry : productsMap.entrySet()) {
@@ -131,5 +152,16 @@ public class ProductStoreApp {
 		Product product = new Product(productId, productName, price);
 		productsMap.put(product.getProductId(), product);
 	}
-}
 
+	private void deleteByProductId() {
+		System.err.println("Enter Id : ");
+		Scanner scanner = new Scanner(System.in);
+		int productId = Integer.parseInt(scanner.nextLine());
+
+		Product removedProduct = productsMap.remove(productId);
+		if (removedProduct != null)
+			System.err.println("Removed Product!");
+		else
+			System.err.println("Product not found!");
+	}
+}
