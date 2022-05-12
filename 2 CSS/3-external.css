@@ -1,0 +1,10 @@
+
+/* paragraph / element selector */
+p {
+   background-color: cyan;
+   color:blue;
+}
+
+body {
+   background-color: yellow;
+}
