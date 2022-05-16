@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      .container-flex-row {
+         display: flex;
+         background-color: blueviolet;
+         /* default */
+         flex-direction: row;
+      }
+      .container-flex-column {
+         display: flex;
+         background-color: red;
+         /* default */
+         flex-direction: column;
+         width: 350px;
+      }
+      .container {
+         margin: 5px;
+         background-color: cyan;
+         border-radius: 15px;
+         padding: 50px;
+         font-size: 150%;
+      }
+   </style>
+</head>
+
+<body>
+   <div class="container-flex-row">
+      <div class="container">Container / Element 1</div>
+      <div class="container">Container / Element 2 </div>
+      <div class="container">Container / Element 3 </div>
+      <div class="container">Container / Element 4</div>
+      <div class="container">Container / Element 5</div>
+      <div class="container">Container / Element 6</div>
+   </div>
+   <div class="container-flex-column">
+      <div class="container">Container / Element 1</div>
+      <div class="container">Container / Element 2 </div>
+      <div class="container">Container / Element 3 </div>
+      <div class="container">Container / Element 4</div>
+      <div class="container">Container / Element 5</div>
+      <div class="container">Container / Element 6</div>
+   </div>
+</body>
+
+</html>
