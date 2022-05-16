@@ -1,0 +1,49 @@
+<!-- HTML 5 document -->
+<!DOCTYPE html>
+<!-- english -->
+<html lang="en">
+
+<head>
+   <!-- addtional informaton  -->
+   <meta charset="UTF-8">
+   <!-- support for legacy browser ie 7/8  -->
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <!-- viewport / the area of a web page the user can see -->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      body {
+         margin: 100px;
+         background-color: black;
+
+      }
+
+      .wrapper {
+         display: grid;
+         /* gap : 25px; */
+         /* grid: auto auto / auto auto auto */
+         grid : 1fr 2fr / 1fr 3fr 1fr;
+      }
+
+      .container {
+         margin: 5px;
+         background-color: red;
+         padding: 50px;
+         border-radius: 50px;
+         font-size: 150%;
+      }
+   </style>
+</head>
+
+<body>
+   <div class="wrapper">
+      <div class="container">Container / Element 1</div>
+      <div class="container">Container / Element 2 </div>
+      <div class="container">Container / Element 3 </div>
+      <div class="container">Container / Element 4</div>
+      <div class="container">Container / Element 5</div>
+      <div class="container">Container / Element 6</div>
+   </div>
+</body>
+
+</html>
