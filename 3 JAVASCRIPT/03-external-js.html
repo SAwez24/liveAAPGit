@@ -1,0 +1,56 @@
+<!-- instructs browser / html 5 document -->
+<!DOCTYPE html>
+<!-- english used -->
+<html lang="en">
+
+<head>
+   <!-- character encoding UTF-8 -->
+   <meta charset="UTF-8">
+   <!-- supports legacy versions of internet explorer -->
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <!--  -->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+   <script src="03-external.js"></script>
+   <title>Javascript</title>
+   <!-- link to external script file -->
+   <script>
+      alert("internal");
+      console.log("internal");
+   </script>
+   <!-- internal javascript -->
+   <!-- <script>
+      console.log("Get executed automatically")
+      alert("executed automatically")
+   </script>
+   <script>
+      console.log(" 1 Get executed automatically")
+      alert("1 executed automatically")
+   </script> -->
+
+   <script>
+      function functionFromInternalScript() {
+         console.log("functionFromInternalScript")
+         alert("functionFromInternalScript")
+      }
+   </script>
+
+   
+   <!-- <script>
+      alert("internal");
+   </script> -->
+</head>
+
+<body>
+   <!-- inline / individual elements -->
+   <form onsubmit="return false">
+      <!-- click event / alert function -->
+      <button onclick="alert('Welcome to the world of Javascript')">Get Message</button>
+      <button onclick="alert('Thankyou!!!')">Say Thankyou</button>
+      <!-- using internal script -->
+      <button onclick="functionFromInternalScript()">Internal Script</button>
+      <button onclick="functionFromExternalScript()">External Script</button>
+   </form>
+</body>
+
+</html>
