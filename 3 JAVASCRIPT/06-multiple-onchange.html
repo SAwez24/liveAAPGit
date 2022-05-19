@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   Email : 
+   <input type="text" id="email">
+   Contact : 
+   <input type="text" id="contact">
+
+   <script>
+      document.getElementById("email").addEventListener('change', () => { console.log(event.target.value)})
+      document.getElementById("contact").addEventListener('change', () => { console.log(event.target.value)})
+   </script>
+
+   <div id="userControls">
+      First :
+      <input name="firstName" type="text">
+      Last :
+      <input name="lastName" type="text">
+   </div>
+
+
+   <script>
+      document.getElementById("userControls").addEventListener('change', function() {
+         var control = event.target;
+         // console.log(control.name);
+         // console.log(control.tagName);
+         // console.log(control.type);
+         console.log(control.value);
+      })
+   </script>
+</body>
+
+</html>

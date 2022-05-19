@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <script>
+      function updateTest() {
+         // alert("changing content");
+         var testParagraphElement = document.getElementById("test");
+         testParagraphElement.innerHTML = "<span style='color:aquamarine'><b><i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere accusamus dolorum inventore natus atque ea nobis dolore ex provident expedita, error numquam non quisquam eligendi molestias maiores, libero corporis eum!</i></b></span>"
+      }
+   </script>
+   <form onsubmit="return false"></form>
+   <!-- uniquely identified with id -->
+   <p id="test">
+      <b>Update Lorem</b>
+   </p>
+   <button onclick="updateTest()">UPDATE LOREM</button>
+   <script>
+      // alert("to update page content using DOM")
+      // alert(document.getElementById("test").innerHTML);
+      var testParagraphElement = document.getElementById("test");
+      var htmlContentInsidePara = testParagraphElement.innerHTML;
+      console.log('content inside para : ', htmlContentInsidePara)
+      // alert(htmlContentInsidePara);
+   </script>
+</body>
+
+</html>
