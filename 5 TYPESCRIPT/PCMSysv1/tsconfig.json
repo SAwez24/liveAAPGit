@@ -1,0 +1,10 @@
+{
+   "compilerOptions": {
+      // compile typescript > javascript version
+      "target":"ES2018",
+      // traspiled js code stored in dir
+      "outDir" : "./dist",
+      "rootDir": "./src",
+      "module" : "CommonJS"
+   }
+}
