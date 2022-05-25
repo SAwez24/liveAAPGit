@@ -1,5 +1,16 @@
 :beginner: _**display the employees**_  
 
+:zero: _create comp_  
+```sh
+$ ng generate component list-emp
+CREATE src/app/list-emp/list-emp.component.html (23 bytes)
+CREATE src/app/list-emp/list-emp.component.spec.ts (634 bytes)
+CREATE src/app/list-emp/list-emp.component.ts (282 bytes)
+CREATE src/app/list-emp/list-emp.component.css (0 bytes)
+UPDATE src/app/app.module.ts (487 bytes)
+
+```
+
 :one: _import HttpClientModule / app.module.ts_  
 ```ts
 import { NgModule } from '@angular/core';
