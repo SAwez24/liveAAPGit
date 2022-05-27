@@ -42,7 +42,7 @@ npm uninstall @angular/cli
 npm cache clean
 //install angular client
 npm install -g @angular/cli@8.0.1
-npm install -g @angular/cli@13.3.4
+npm install -g @angular/cli@13.3.0
 npm install -g @angular/cli@latest
 ```
 :point_right: create angular project
