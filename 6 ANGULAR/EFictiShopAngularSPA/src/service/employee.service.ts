@@ -1,6 +1,10 @@
 import { HttpClient } from "@angular/common/http";
+import { Injectable } from "@angular/core";
 import { Employee } from "src/model/employee.model";
 
+@Injectable({
+   providedIn:'root'
+})
 export class EmployeeService {
    // url for REST API
    baseURL: string = 'http://localhost:3000/employees';
@@ -9,6 +13,6 @@ export class EmployeeService {
    }
    getEmployees() {
       // get : fetch data from server
-      this.httpClient.get<Employee>(this.baseURL)
+      return this.httpClient.get<Employee[]>(this.baseURL)
    }
 }
