@@ -23,4 +23,9 @@ export class EmployeeService {
   // post : send data to the server
   return this.http.post(this.baseUrl,employee)
   }
+
+  //delete employee
+  deleteEmployee(id:number) {
+    return this.http.delete<Employee>(this.baseUrl+'/'+id);
+  }
 }

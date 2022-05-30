@@ -9,11 +9,6 @@
       "id": 2,
       "name": "Ana",
       "salary": 3000
-    },
-    {
-      "id": 3,
-      "name": "Tesla",
-      "salary": "5000"
     }
   ]
 }

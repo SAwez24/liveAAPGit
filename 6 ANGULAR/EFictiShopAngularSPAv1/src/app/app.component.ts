@@ -10,17 +10,12 @@ import { EmployeeService } from './service/employee.service';
 })
 export class AppComponent implements OnInit{
   title = 'EFictiShopAngularSPA';
-  employees?: Employee[];
+  // employees?: Employee[];
 
-  constructor(private employeeService : EmployeeService) {
-  }
+  // constructor(private employeeService : EmployeeService) {
+  // }
 
   ngOnInit(): void {
-    this.employeeService.getEmployees().subscribe(
-      (data => {
-        this.employees = data;
-        console.log("DATA : " + data)
-      })
-    );
+
   }
 }

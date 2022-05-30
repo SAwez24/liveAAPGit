@@ -1,1 +1,8 @@
-<p>list-emp works!</p>
+
+<div *ngFor="let employee of employees">
+   {{employee.id}}
+   {{employee.name}}
+   {{employee.salary}}
+   <button (click)="deleteEmp(employee)">Delete</button>
+</div>
+

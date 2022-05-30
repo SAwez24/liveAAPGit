@@ -1,4 +1,8 @@
 :beginner: _**AddEmpComponent**_  
+:zero: _tsconfig.json_  
+```json
+   "strict": false,
+```
 
 :one: _create comp_  
 ```ts
@@ -40,39 +44,54 @@ export class AppModule { }
 ```ts
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-
-@Component({
+import {EmployeeService} from '../service/employee.service' 
+  
+  @Component({
   selector: 'app-add-emp',
   templateUrl: './add-emp.component.html',
   styleUrls: ['./add-emp.component.css']
 })
 export class AddEmpComponent implements OnInit {
-
   addEmpForm: FormGroup;
-  constructor(private formBuilder : FormBuilder) { }
+
+  constructor(private formBuilder : FormBuilder, private employeeService: EmployeeService) { }
 
   ngOnInit(): void {
-    this.addEmpForm = this.formBuilder.group({
-      id:[],
-      name: ['Sam',Validators.required,Validators.maxLength(5)],
-      salary: ['1000', [Validators.required]]
-    });
+    this.addEmpForm = this.formBuilder.group ( {
+      id: [],
+      // name: ['Sam',Validators.required, Validators.maxLength(5)],
+      // salary : ['1000', Validators.required]
+      name :[],
+      salary : [],
+    })
   }
+ onSubmit() {
+   console.log("Employee details sent to the server...");
+  this.employeeService
+  .createEmployee(this.addEmpForm.value)
+  .subscribe((data)=>{console.log("Data Saved")})
+ }
 }
+
 
 ```
 :four: _add-emp.component.html_  
 ```html
-<h1>Add Employee Details Form</h1>
-
+<br>
+<h4>Add Employee Details Form</h4>
+<br>
 <form [formGroup]="addEmpForm">
-   Employee Id : 
-   <input type="number" formControlName="id" >
-   Name : 
-   <input type="number" formControlName="name" >
-   Salary : 
-   <input type="number" formControlName="salary" >
+    <!-- Employee Id :  -->
+    <!-- <input type="hidden" formControlName="id" ><br><br> -->
+    <input type="hidden" formControlName="id"><br><br>
+    Name : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" formControlName="name"><br><br>
+    Salary : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" formControlName="salary"><br><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button class="btn btn-success" (click)="onSubmit()">Save</button>
 </form>
+
 ```
 :five: _app.component.html_  
 
