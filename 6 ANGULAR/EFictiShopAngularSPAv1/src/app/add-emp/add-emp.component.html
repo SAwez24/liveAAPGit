@@ -1,0 +1,14 @@
+<br>
+<h4>Add Employee Details Form</h4>
+<br>
+<form [formGroup]="addEmpForm">
+    <!-- Employee Id :  -->
+    <!-- <input type="hidden" formControlName="id" ><br><br> -->
+    <input type="hidden" formControlName="id"><br><br>
+    Name : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" formControlName="name"><br><br>
+    Salary : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" formControlName="salary"><br><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button class="btn btn-success" (click)="onSubmit()">Save</button>
+</form>
