@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Employee } from 'src/model/employee.model';
-import { EmployeeService } from 'src/service/employee.service';
+import { EmployeeService } from 'src/app/service/employee.service';
 //@Override / annotion
 // @Component / decorator
 @Component({
