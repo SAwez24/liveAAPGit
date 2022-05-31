@@ -1,3 +1,14 @@
 {
-  "employees": []
+  "employees": [
+    {
+      "id": 1,
+      "name": "Ane",
+      "salary": 4000
+    },
+    {
+      "id": 2,
+      "name": "Ana",
+      "salary": 3000
+    }
+  ]
 }

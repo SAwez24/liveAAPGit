@@ -1,8 +1,14 @@
-
+<div class="container">
+<!-- structural directive -->
 <div *ngFor="let employee of employees">
    {{employee.id}}
    {{employee.name}}
    {{employee.salary}}
-   <button (click)="deleteEmp(employee)">Delete</button>
+
+   <!-- event (click) -->
+   <!-- deleteEmp(employee) / event handler -->
+   <button class="btn btn-success" (click)="deleteEmp(employee)">Delete</button>
+   <br><br>
 </div>
 
+</div>
