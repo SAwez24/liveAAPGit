@@ -1,0 +1,29 @@
+<br>
+<div class="container">
+<h4>Add Employee Details Form [Template Driven]</h4>
+<br>
+<!-- eliminate formGroup property -->
+<!-- <form [formGroup]="addEmpForm"> -->
+    <!-- add local reference -->
+<form #addEmpForm ="ngForm" (ngSubmit)="onSubmit(addEmpForm.value)">
+<br>
+    <div style="width:250px" class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid">
+        <div *ngIf="firstName.errors && firstName.errors['required']">First name cannot be blank</div>
+        <div *ngIf="firstName.errors && firstName.errors['minlength']">First name cannot be less than 3 chars</div>
+        <div *ngIf="firstName.errors && firstName.errors['maxlength']">First name cannot be less greater tha 7 chars</div>
+    </div>
+
+    <!-- Employee Id :  -->
+    <!-- <input type="hidden" formControlName="id" ><br><br> -->
+    <!-- <input type="hidden" formControlName="id"> -->
+    <!-- <br><br> -->
+    Name : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" ngModel #firstName="ngModel" required minlength="3" maxlength="7" name="firstName"><br><br>
+    Salary : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" ngModel #salary="ngModel" name="salary"><br><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button class="btn btn-success" type="submit" [class.disabled]="!addEmpForm.valid">Save</button>
+    <br>
+
+</form>
+</div>
