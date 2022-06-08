@@ -14,7 +14,7 @@ ng serve
 ```sh
 # npm install  --save bootstrap  
 # npm install -s bootstrap
-npm install @angular/material @angular/sdk
+npm install --save @angular/material @angular/animations @angular/cdk
 ```
 
 :four: _material icons index.html_
@@ -27,4 +27,7 @@ npm install @angular/material @angular/sdk
 ```html
 @import "~@angular/material/prebuilt-themes/purple-green.css";
 ```
+
+
+  
 
