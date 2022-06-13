@@ -2,7 +2,7 @@
 <!-- structural directive -->
 <div *ngFor="let employee of employees">
    {{employee.id}}
-   {{employee.name}}
+   {{employee.name | uppercase}}
    {{employee.salary}}
 
    <!-- event (click) -->

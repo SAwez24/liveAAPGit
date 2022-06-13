@@ -3,7 +3,7 @@
 
     <H2>EMPLOYEE DETAILS</H2>
     <ul *ngFor = "let employee of employees">
-        <li>{{employee.id}} {{employee.name}} {{employee.salary}}</li>
+        <li>{{employee.id}} {{employee.name | uppercase}} {{employee.salary}}</li>
     </ul>
     <h1>Form Component</h1>
     <!-- <form>
