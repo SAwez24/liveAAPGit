@@ -1,0 +1,28 @@
+<!-- heading to display "Contact List"  -->
+
+<div>
+    <h1>Contact Details</h1>
+</div>
+
+<!-- Contact Form to taken in name and phone number-->
+
+<div>
+<form [formGroup]="contactFormGroup" (ngSubmit)="onSubmit($event)">
+    <div class="form-control">
+        <label>Name:&nbsp;&nbsp;&nbsp;</label>
+        <input type="text" formControlName="name" required="" />
+    </div>
+    <br>
+    <div class="form-control">
+        <label>Mobile:&nbsp;</label>
+        <input type="text" formControlName="mobile" required="" />
+    </div>
+    <br>
+    <button type="submit">Add to Contact</button>
+    
+</form>
+</div>
+
+<!-- Button to route user to `search component` -->
+<br>
+<button routerLink="/search" >Go to Search</button>

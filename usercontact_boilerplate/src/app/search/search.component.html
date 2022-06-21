@@ -1,0 +1,20 @@
+<!-- Table to list all contact available -->
+
+<input type="text" [(ngModel)]="searchText" />
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Mobile</th>
+    </tr>
+    <tr *ngFor="let data of contacts | search : searchText">
+        <th>{{data.name}}</th>
+        <th>{{data.mobile}}</th>
+    </tr>
+</table>
+
+
+<!-- Button to go back to contact form view  -->
+
+<div>
+    <button routerLink="/home">Go to Home</button>
+</div>

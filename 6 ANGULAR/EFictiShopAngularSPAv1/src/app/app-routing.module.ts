@@ -11,6 +11,7 @@ export const routes: Routes = [
     { path: '', component: LoginComponent },
     { path: 'login', component: LoginComponent },
     { path: 'list-emp', component: ListEmpComponent, canActivate: [AuthGuardService] },
+    //  { path: 'list-emp', component: ListEmpComponent},
     { path: 'add-emp', component: AddEmpComponent, canActivate: [AuthGuardService]  },
     { path: 'add-emp-temp-driven', component: AddEmpTempDrivenComponent, canActivate: [AuthGuardService]  },
     { path: '**', component: LoginComponent },
